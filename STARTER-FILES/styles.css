@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap');
+
+body {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  min-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.start-game, .game-menu {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(100, 100, 100, 0.8);
+    z-index: 2;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+
+}
+.game-menu {
+    display: none;
+}
+.game-over-menu {
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    justify-content: center;
+}
+.start-game_greet {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.game-pause-header {
+    width: auto;
+    position: initial;
+    transform: initial;
+}
+.lives {
+    position: absolute;
+    bottom: -120px;
+    left: 48%;
+    color:#60C1B6;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.keyboard {
+  background: #F6F6F6;
+  padding: 45px 50px;
+  border-radius: 50px;
+  position: relative;
+}
+
+h1 {
+  color: #60C1B6;
+  font-family: 'Inter', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: bold;
+  font-size: 1.75rem;
+  text-align: center;
+  position: absolute;
+  top: -80px;
+  left: 50%;
+  width: 100vw;
+  transform: translateX(-50%);
+}
+
+.score {
+    position: absolute;
+    top: 50%;
+    left: -200px;
+    color:#60C1B6;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+.score-best {
+    position: absolute;
+    top: 50%;
+    right: -200px;
+    color:#60C1B6;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+  width: 1110px;
+}
+
+.key, .key-start, .key-restart {
+  background: #FFFFFF;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.05);
+  border: none;
+  border-radius: 16px;
+  color: #60C1B6;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Inter', sans-serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  justify-content: center;
+  min-width: 65px;
+  align-items: center;
+  padding: 18px 24px;
+  height: 65px;
+  box-sizing: border-box;
+}
+
+.utility {
+  color: #868888;
+  flex: auto;
+}
+
+.key:hover {
+  background:  #ffd200;
+  color: black;
+}
+
+.jiggle {
+  animation: jiggle 1s;
+  animation-iteration-count: infinite;
+  background: #60C1B6;
+  color: white;
+}
+.jiggle-wrong {
+    animation:jiggle-wrong 1s;
+    animation-iteration-count: 1;
+}
+
+@keyframes jiggle {
+  0% { transform: translate(1px, 1px) rotate(0deg) }
+  10% { transform: translate(-1px, -2px) rotate(-3deg) }
+  20% { transform: translate(-3px, 0px) rotate(3deg) }
+  30% { transform: translate(3px, 2px) rotate(0deg) }
+  40% { transform: translate(1px, -1px) rotate(3deg) }
+  50% { transform: translate(-1px, 2px) rotate(-3deg) }
+  60% { transform: translate(-3px, 1px) rotate(0deg) }
+  70% { transform: translate(3px, 1px) rotate(-3deg) }
+  80% { transform: translate(-1px, -1px) rotate(3deg) }
+  90% { transform: translate(1px, 2px) rotate(0deg) }
+  100% { transform: translate(1px, -2px) rotate(-3deg) }
+}
+@keyframes jiggle-wrong {
+    0% { transform: translate(1px, 1px) rotate(0deg); color:white; background: #60C1B6;}
+    10% { transform: translate(-1px, -2px) rotate(-3deg); color:red; background: #60C1B6;}
+    20% { transform: translate(-3px, 0px) rotate(3deg); color:white; background: #60C1B6;}
+    30% { transform: translate(3px, 2px) rotate(0deg); color:red; background: #60C1B6;}
+    40% { transform: translate(1px, -1px) rotate(3deg); color:white; background: #60C1B6;}
+    50% { transform: translate(-1px, 2px) rotate(-3deg); color:red; background: #60C1B6;}
+    60% { transform: translate(-3px, 1px) rotate(0deg); color:white; background: #60C1B6;}
+    70% { transform: translate(3px, 1px) rotate(-3deg); color:red; background: #60C1B6;}
+    80% { transform: translate(-1px, -1px) rotate(3deg); color:white; background: #60C1B6;}
+    90% { transform: translate(1px, 2px) rotate(0deg); color:red; background: #60C1B6;}
+    100% { transform: translate(1px, -2px) rotate(-3deg); color:white; background: #60C1B6;}
+}
